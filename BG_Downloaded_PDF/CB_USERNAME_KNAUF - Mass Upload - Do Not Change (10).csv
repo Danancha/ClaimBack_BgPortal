@@ -1,0 +1,6 @@
+BRAND,I,,,,,,,,,,,,,,,,,,,,,,,,,
+USER.ID,Bot ID,,,,,,,,,,,,,,,,,,,,,,,,,
+STATUS,CLAIMBACK,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,
+Branch,Customer,Supplier,Site,Claimback Type,Status,Claimback Reference,Authorised,Default Discount,From,Start Date,Stop Date,Review Date,Original Branch,Yard/Direct/Both,Report Type,Notes,Sales Periods,Sales Period Values,Exclude,Level,Level Code,Override Discount,Agreed Amount,Agreed Cost,Uom,Quantity
+#VALUE!,#VALUE!,#VALUE!,#VALUE!,#VALUE!,#VALUE!,#VALUE!,#VALUE!,,,#VALUE!,#VALUE!,#VALUE!,#VALUE!,#VALUE!,#VALUE!,,,,,#VALUE!,#N/A,,#N/A,,#N/A,

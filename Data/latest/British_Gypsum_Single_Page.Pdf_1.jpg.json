@@ -1,0 +1,297 @@
+{
+   "fields": {
+      "name": "British Gypsum",
+      "vendor-addr": "SAINT-GOBAIN",
+      "billing-name": "",
+      "billing-addr": "",
+      "shipping-addr": "",
+      "invoice-no": "",
+      "po-no": "",
+      "vendor-vat-no": "",
+      "date": "",
+      "tax": "",
+      "total": "",
+      "payment-terms": "",
+      "net-amount": "",
+      "due-date": "",
+      "discount": "",
+      "shipping-charges": "",
+      "payment-addr": "",
+      "billing-vat-no": "",
+      "currency": "GBP",
+      "items": [],
+      "language": "en"
+   },
+   "batch": "british_gysum",
+   "fname": "British_Gypsum_Single_Page.Pdf_1.jpg",
+   "pages": [
+      {
+         "name": "British_Gypsum_Single_Page.Pdf_1.jpg"
+      }
+   ],
+   "words": [
+      [
+         {
+            "boundingPoly": {
+               "vertices": [
+                  {
+                     "x": 408.18,
+                     "y": 99.41
+                  },
+                  {
+                     "x": 546.31,
+                     "y": 99.41
+                  },
+                  {
+                     "x": 546.31,
+                     "y": 143.46
+                  },
+                  {
+                     "x": 408.18,
+                     "y": 143.46
+                  }
+               ]
+            },
+            "description": "British",
+            "score": 1.0,
+            "line": 0,
+            "page": 0,
+            "tag": "name"
+         },
+         {
+            "boundingPoly": {
+               "vertices": [
+                  {
+                     "x": 555.32,
+                     "y": 101.43
+                  },
+                  {
+                     "x": 737.51,
+                     "y": 101.43
+                  },
+                  {
+                     "x": 737.51,
+                     "y": 154.46
+                  },
+                  {
+                     "x": 555.32,
+                     "y": 154.46
+                  }
+               ]
+            },
+            "description": "Gypsum",
+            "score": 1.0,
+            "line": 0,
+            "page": 0,
+            "tag": "name"
+         }
+      ],
+      [
+         {
+            "boundingPoly": {
+               "vertices": [
+                  {
+                     "x": 629.4,
+                     "y": 149.47
+                  },
+                  {
+                     "x": 737.51,
+                     "y": 149.47
+                  },
+                  {
+                     "x": 737.51,
+                     "y": 163.47
+                  },
+                  {
+                     "x": 629.4,
+                     "y": 163.47
+                  }
+               ]
+            },
+            "description": "SAINT-GOBAIN",
+            "score": 1.0,
+            "line": 1,
+            "page": 0,
+            "tag": "vendor-addr"
+         }
+      ],
+      [
+         {
+            "boundingPoly": {
+               "vertices": [
+                  {
+                     "x": 210.26,
+                     "y": 318.23
+                  },
+                  {
+                     "x": 562.11,
+                     "y": 318.23
+                  },
+                  {
+                     "x": 562.11,
+                     "y": 355.75
+                  },
+                  {
+                     "x": 210.26,
+                     "y": 355.75
+                  }
+               ]
+            },
+            "description": "bgcontract.support@bpb.com.",
+            "score": 1.0,
+            "line": 2,
+            "page": 0,
+            "tag": ""
+         }
+      ],
+      [
+         {
+            "boundingPoly": {
+               "vertices": [
+                  {
+                     "x": 210.26,
+                     "y": 411.11
+                  },
+                  {
+                     "x": 271.88,
+                     "y": 411.11
+                  },
+                  {
+                     "x": 271.88,
+                     "y": 448.63
+                  },
+                  {
+                     "x": 210.26,
+                     "y": 448.63
+                  }
+               ]
+            },
+            "description": "Yours",
+            "score": 1.0,
+            "line": 3,
+            "page": 0,
+            "tag": ""
+         },
+         {
+            "boundingPoly": {
+               "vertices": [
+                  {
+                     "x": 278.22,
+                     "y": 411.11
+                  },
+                  {
+                     "x": 379.06,
+                     "y": 411.11
+                  },
+                  {
+                     "x": 379.06,
+                     "y": 448.63
+                  },
+                  {
+                     "x": 278.22,
+                     "y": 448.63
+                  }
+               ]
+            },
+            "description": "sincerely",
+            "score": 1.0,
+            "line": 3,
+            "page": 0,
+            "tag": ""
+         }
+      ],
+      [
+         {
+            "boundingPoly": {
+               "vertices": [
+                  {
+                     "x": 210.26,
+                     "y": 475.84
+                  },
+                  {
+                     "x": 294.32,
+                     "y": 475.84
+                  },
+                  {
+                     "x": 294.32,
+                     "y": 513.37
+                  },
+                  {
+                     "x": 210.26,
+                     "y": 513.37
+                  }
+               ]
+            },
+            "description": "Connor",
+            "score": 1.0,
+            "line": 4,
+            "page": 0,
+            "tag": ""
+         },
+         {
+            "boundingPoly": {
+               "vertices": [
+                  {
+                     "x": 300.7,
+                     "y": 475.84
+                  },
+                  {
+                     "x": 416.17,
+                     "y": 475.84
+                  },
+                  {
+                     "x": 416.17,
+                     "y": 513.37
+                  },
+                  {
+                     "x": 300.7,
+                     "y": 513.37
+                  }
+               ]
+            },
+            "description": "Honeybell",
+            "score": 1.0,
+            "line": 4,
+            "page": 0,
+            "tag": ""
+         }
+      ],
+      [
+         {
+            "boundingPoly": {
+               "vertices": [
+                  {
+                     "x": 973.78,
+                     "y": 3043.87
+                  },
+                  {
+                     "x": 1258.05,
+                     "y": 3043.87
+                  },
+                  {
+                     "x": 1258.05,
+                     "y": 3076.93
+                  },
+                  {
+                     "x": 973.78,
+                     "y": 3076.93
+                  }
+               ]
+            },
+            "description": "SAINT-GOBAIN",
+            "score": 1.0,
+            "line": 5,
+            "page": 0,
+            "tag": ""
+         }
+      ]
+   ],
+   "manual_edit": {
+      "fields": [
+         "currency"
+      ],
+      "items": {}
+   },
+   "vs_labelled": false,
+   "subset": "TEST"
+}

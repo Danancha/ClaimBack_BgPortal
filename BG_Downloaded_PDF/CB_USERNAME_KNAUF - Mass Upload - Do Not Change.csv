@@ -1,0 +1,10 @@
+BRAND,I,,,,,,,,,,,,,,,,,,,,,,,,,
+USER.ID,JOLSE,,,,,,,,,,,,,,,,,,,,,,,,,
+STATUS,CLAIMBACK,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,
+Branch,Customer,Supplier,Site,Claimback Type,Status,Claimback Reference,Authorised,Default Discount,From,Start Date,Stop Date,Review Date,Original Branch,Yard/Direct/Both,Report Type,Notes,Sales Periods,Sales Period Values,Exclude,Level,Level Code,Override Discount,Agreed Amount,Agreed Cost,Uom,Quantity
+4811,JP9575,K0020,43317,C,A,25077120,01/11/2022,,,01/11/2022,31/12/2022,01/11/2022,4811,Y,S,,,,,5,858175,,0.34,,M2,
+4811,JP9575,K0020,43317,C,A,25077120,01/11/2022,,,01/11/2022,31/12/2022,01/11/2022,4811,Y,S,,,,,5,858161,,0.40,,M2,
+4811,JP9575,K0020,43317,C,A,25077120,01/11/2022,,,01/11/2022,31/12/2022,01/11/2022,4811,Y,S,,,,,5,858162,,0.40,,M2,
+4811,JP9575,K0020,43317,C,A,25077120,01/11/2022,,,01/11/2022,31/12/2022,01/11/2022,4811,Y,S,,,,,5,858179,,0.40,,M2,
+4811,JP9575,K0020,43317,C,A,25077120,01/11/2022,,,01/11/2022,31/12/2022,01/11/2022,4811,Y,S,,,,,5,282776,,0.35,,M2,
