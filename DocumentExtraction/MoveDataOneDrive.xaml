@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="MoveDataOneDrive" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:gadvd="clr-namespace:Google.Apis.Drive.v3.Data;assembly=Google.Apis.Drive.v3" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugad="clr-namespace:UiPath.GSuite.Activities.Drive;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="MoveDataOneDrive" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:gadvd="clr-namespace:Google.Apis.Drive.v3.Data;assembly=Google.Apis.Drive.v3" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugad="clr-namespace:UiPath.GSuite.Activities.Drive;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="In_AgreementID" Type="InArgument(x:String)" />
     <x:Property Name="In_Extraction_Info_googlesheetID" Type="InArgument(x:String)" />
@@ -6,10 +6,10 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1153.33333333333,2474.66666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1239.33333333333,2770</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>MoveDataOneDrive_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="33">
+    <scg:List x:TypeArguments="x:String" Capacity="66">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -43,6 +43,7 @@
       <x:String>System.Runtime.InteropServices</x:String>
       <x:String>Google.Apis.Drive.v3.Data</x:String>
       <x:String>Google.Apis.Requests</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -80,9 +81,10 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="MoveDataOneDrive" sap:VirtualizedContainerService.HintSize="958,2370" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="MoveDataOneDrive" sap:VirtualizedContainerService.HintSize="1020.66666666667,2665.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="folderAvailable" />
     </Sequence.Variables>
@@ -91,13 +93,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ugad:GoogleDriveApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" Timeout="{x:Null}" Account="danancha.perera@travisperkins.co.uk" DisplayName="Use Google Drive" sap:VirtualizedContainerService.HintSize="916,2278" sap2010:WorkflowViewState.IdRef="GoogleDriveApplicationScope_1" UseConnectionService="False" UserEmail="danancha.perera@travisperkins.co.uk">
+    <ugad:GoogleDriveApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" Timeout="{x:Null}" Account="danancha.perera@travisperkins.co.uk" DisplayName="Use Google Drive" sap:VirtualizedContainerService.HintSize="978.666666666667,2573.33333333333" sap2010:WorkflowViewState.IdRef="GoogleDriveApplicationScope_1" UseConnectionService="False" UserEmail="danancha.perera@travisperkins.co.uk">
       <ugad:GoogleDriveApplicationScope.Body>
         <ActivityAction x:TypeArguments="ugad:IGoogleDriveTarget">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ugad:IGoogleDriveTarget" Name="GoogleDrive" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="882,2134.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="944.666666666667,2430" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="folderID" />
               <Variable x:TypeArguments="gadvd:File[]" Name="folderExist" />
@@ -110,21 +112,21 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uga:FindFiles ContinueOnError="{x:Null}" AuthScopesInvalid="False" DisplayName="Find Files and Folders" DriveTarget="[GoogleDrive]" FirstResultId="[folderAvailable]" sap:VirtualizedContainerService.HintSize="840,84" sap2010:WorkflowViewState.IdRef="FindFiles_1" MaxResults="50" Result="[folderExist]" SearchExpression="name = 'AgreementFolder'" SupportsTeamDrives="False" />
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="840,62.6666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[folderAvailable]" />
-            <If Condition="[String.IsNullOrEmpty(folderAvailable)]" sap:VirtualizedContainerService.HintSize="840,482" sap2010:WorkflowViewState.IdRef="If_1">
+            <uga:FindFiles ContinueOnError="{x:Null}" AuthScopesInvalid="False" DisplayName="Find Files and Folders" DriveTarget="[GoogleDrive]" FirstResultId="[folderAvailable]" sap:VirtualizedContainerService.HintSize="901,80" sap2010:WorkflowViewState.IdRef="FindFiles_1" MaxResults="50" Result="[folderExist]" SearchExpression="name = 'AgreementFolder'" SupportsTeamDrives="False" />
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="901,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[folderAvailable]" />
+            <If Condition="[String.IsNullOrEmpty(folderAvailable)]" sap:VirtualizedContainerService.HintSize="902.666666666667,469.333333333333" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="376,287.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence sap:VirtualizedContainerService.HintSize="376,275" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uga:CreateFolder ContinueOnError="{x:Null}" FolderDescription="{x:Null}" ParentFriendlyName="{x:Null}" ParentId="{x:Null}" AuthScopesInvalid="False" DisplayName="Create Folder" DriveTarget="[GoogleDrive]" FolderName="AgreementFolder" sap:VirtualizedContainerService.HintSize="334,195.333333333333" sap2010:WorkflowViewState.IdRef="CreateFolder_1" ParentIdSelectionMode="Browse" Result="[folderID]" SupportsTeamDrives="False" />
+                  <uga:CreateFolder ContinueOnError="{x:Null}" FolderDescription="{x:Null}" ParentFriendlyName="{x:Null}" ParentId="{x:Null}" AuthScopesInvalid="False" DisplayName="Create Folder" DriveTarget="[GoogleDrive]" FolderName="AgreementFolder" sap:VirtualizedContainerService.HintSize="334,183" sap2010:WorkflowViewState.IdRef="CreateFolder_1" ParentIdSelectionMode="Browse" Result="[folderID]" SupportsTeamDrives="False" />
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="200,84.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -133,7 +135,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <Assign sap:VirtualizedContainerService.HintSize="840,62" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign sap:VirtualizedContainerService.HintSize="902.666666666667,62" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[RootfolderName]</OutArgument>
               </Assign.To>
@@ -141,8 +143,8 @@
                 <InArgument x:TypeArguments="x:String">["'"+In_AgreementID+"'"]</InArgument>
               </Assign.Value>
             </Assign>
-            <uga:FindFiles ContinueOnError="{x:Null}" AuthScopesInvalid="False" DisplayName="Find Files and Folders" DriveTarget="[GoogleDrive]" FirstResultId="[agrrementFolder]" sap:VirtualizedContainerService.HintSize="840,84" sap2010:WorkflowViewState.IdRef="FindFiles_2" MaxResults="50" Result="[folderExist]" SearchExpression="[&quot;name =&quot;+RootfolderName]" SupportsTeamDrives="False" />
-            <If Condition="[String.IsNullOrEmpty(agrrementFolder)]" sap:VirtualizedContainerService.HintSize="840,965.333333333333" sap2010:WorkflowViewState.IdRef="If_2">
+            <uga:FindFiles ContinueOnError="{x:Null}" AuthScopesInvalid="False" DisplayName="Find Files and Folders" DriveTarget="[GoogleDrive]" FirstResultId="[agrrementFolder]" sap:VirtualizedContainerService.HintSize="902.666666666667,84" sap2010:WorkflowViewState.IdRef="FindFiles_2" MaxResults="50" Result="[folderExist]" SearchExpression="[&quot;name =&quot;+RootfolderName]" SupportsTeamDrives="False" />
+            <If Condition="[String.IsNullOrEmpty(agrrementFolder)]" sap:VirtualizedContainerService.HintSize="902.666666666667,1278.66666666667" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="376,585.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_9">
                   <sap:WorkflowViewStateService.ViewState>
@@ -156,27 +158,53 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="418,801.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <Sequence sap:VirtualizedContainerService.HintSize="480.666666666667,1114.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_10">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uga:DeleteFile ContinueOnError="{x:Null}" AuthScopesInvalid="False" DisplayName="Delete File" DriveTarget="[GoogleDrive]" FileId="[agrrementFolder]" sap:VirtualizedContainerService.HintSize="376,84" sap2010:WorkflowViewState.IdRef="DeleteFile_1" SupportsTeamDrives="False" />
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,585.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438.666666666667,632.666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                    <TryCatch.Try>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,395" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uga:DeleteFile ContinueOnError="{x:Null}" AuthScopesInvalid="False" DisplayName="Delete File" DriveTarget="[GoogleDrive]" FileId="[agrrementFolder]" sap:VirtualizedContainerService.HintSize="334,80" sap2010:WorkflowViewState.IdRef="DeleteFile_1" SupportsTeamDrives="False" />
+                        <uga:CreateFolder ContinueOnError="{x:Null}" FolderDescription="{x:Null}" AuthScopesInvalid="False" DisplayName="Create Folder" DriveTarget="[GoogleDrive]" FolderName="[In_AgreementID]" sap:VirtualizedContainerService.HintSize="334,183" sap2010:WorkflowViewState.IdRef="CreateFolder_3" ParentFriendlyName="AgreementFolder" ParentId="https://drive.google.com/drive/folders/164L4y66AOcaTQXRqPGS5CcP2gO3fsvu8" ParentIdSelectionMode="Browse" Result="[foldersubID]" SupportsTeamDrives="False" />
+                      </Sequence>
+                    </TryCatch.Try>
+                    <TryCatch.Catches>
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404.666666666667,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ActivityAction x:TypeArguments="s:Exception">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                          </ActivityAction.Argument>
+                        </ActivityAction>
+                      </Catch>
+                    </TryCatch.Catches>
+                  </TryCatch>
+                  <Sequence sap:VirtualizedContainerService.HintSize="438.666666666667,350" sap2010:WorkflowViewState.IdRef="Sequence_11">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uga:CreateFolder ContinueOnError="{x:Null}" FolderDescription="{x:Null}" AuthScopesInvalid="False" DisplayName="Create Folder" DriveTarget="[GoogleDrive]" FolderName="[In_AgreementID]" sap:VirtualizedContainerService.HintSize="334,195.333333333333" sap2010:WorkflowViewState.IdRef="CreateFolder_3" ParentFriendlyName="AgreementFolder" ParentId="https://drive.google.com/drive/folders/164L4y66AOcaTQXRqPGS5CcP2gO3fsvu8" ParentIdSelectionMode="Browse" Result="[foldersubID]" SupportsTeamDrives="False" />
                     <uga:CopyDriveFile ContinueOnError="{x:Null}" FileFriendlyName="{x:Null}" FileName="{x:Null}" NewParentFriendlyName="{x:Null}" Result="{x:Null}" AuthScopesInvalid="False" DisplayName="Copy File" DriveTarget="[GoogleDrive]" FileId="[In_Extraction_Info_googlesheetID]" FileIdSelectionMode="EnterId" sap:VirtualizedContainerService.HintSize="334,258" sap2010:WorkflowViewState.IdRef="CopyDriveFile_3" NewParentId="[foldersubID]" NewParentIdSelectionMode="EnterId" SupportsTeamDrives="False" />
                   </Sequence>
                 </Sequence>
               </If.Else>
             </If>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="840,62.6666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[foldersubID]" />
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="902.666666666667,62.6666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[foldersubID]" />
           </Sequence>
         </ActivityAction>
       </ugad:GoogleDriveApplicationScope.Body>
