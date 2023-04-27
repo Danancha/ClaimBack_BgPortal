@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>844,1229.33333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1150,1229.33333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="59">
@@ -282,7 +282,7 @@
                     <av:PointCollection x:Key="ConnectorLocation">330,560 330,584.5</av:PointCollection>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence sap2010:Annotation.AnnotationText="Login to BG portal and Scrap the Agreements and Search the new agreements and download to the Local Folder&#xA;" DisplayName="Login BG and Download PDF adding details google sheet" sap:VirtualizedContainerService.HintSize="200,180" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence sap2010:Annotation.AnnotationText="Login to BG portal and Scrap the Agreements and Search the new agreements and download to the Local Folder&#xA;" DisplayName="Login BG and Download PDF adding details google sheet" sap:VirtualizedContainerService.HintSize="990.666666666667,2688" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="sd:DataTable" Name="DT_New_Ref" />
                     <Variable x:TypeArguments="sd:DataTable" Name="DT_Ref_No" />
@@ -327,15 +327,23 @@
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="928.666666666667,96" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Clearing the Download Folder&quot;]" />
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Login_British_Gypsum workflow" sap:VirtualizedContainerService.HintSize="928.666666666667,115.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="BG_Portal_workflows\Login_British_Gypsum.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="In_BGpassword">[BgPassword]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="In_BG_Url">[Config("BG_URL").ToString]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="In_BGmail">[BgUsername]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="In_BGpassword">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="BgPassword" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="In_BG_Url">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;BG_URL&quot;).ToString" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="In_BGmail">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="BgUsername" />
+                      </InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="928.666666666667,96" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Login to British Gysum Portal&quot;]" />
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Extratact_Agreements workflow" sap:VirtualizedContainerService.HintSize="928.666666666667,115.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="BG_Portal_workflows\Extratact_Agreements.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="In_Extracted_googleId">[ExtractedgoogleSheetID]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="In_Extracted_googleId">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ExtractedgoogleSheetID" />
+                      </InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="928.666666666667,96" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Extracting Agreements from Portal&quot;]" />
