@@ -71,7 +71,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="42">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="84">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -114,6 +114,7 @@
       <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap:VirtualizedContainerService.HintSize="818.666666666667,1164.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
@@ -154,7 +155,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Flowchart.StartNode>
-        <x:Reference>__ReferenceID4</x:Reference>
+        <x:Reference>__ReferenceID2</x:Reference>
       </Flowchart.StartNode>
       <FlowStep x:Name="__ReferenceID0">
         <sap:WorkflowViewStateService.ViewState>
@@ -163,7 +164,7 @@
             <av:Size x:Key="ShapeSize">200,54</av:Size>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Data Extraction and Moving Files" sap:VirtualizedContainerService.HintSize="353.333333333333,115.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="DocumentExtraction\DocumentExtraction.xaml">
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Data Extraction and Moving Files" sap:VirtualizedContainerService.HintSize="200,54" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="DocumentExtraction\DocumentExtraction.xaml">
           <ui:InvokeWorkflowFile.Arguments>
             <InArgument x:TypeArguments="x:String" x:Key="In_supplierName">
               <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="BG_SupplierCode" />
@@ -178,10 +179,10 @@
               <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="PricingMailBox" />
             </InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="In_error_folderPath">
-              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;C:\Users\&quot;+Environment.UserName+&quot;\Documents\UiPath\ClaimBack_BGPortal\Data\OutPut\Error&quot;" />
+              <Literal x:TypeArguments="x:String">D:\uipathg\ClaimBack_BGPortal\Data\OutPut\Error</Literal>
             </InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="In_Success_FolderPath">
-              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;C:\Users\&quot;+Environment.UserName+&quot;\Documents\UiPath\ClaimBack_BGPortal\Data\OutPut\Success&quot;" />
+              <Literal x:TypeArguments="x:String">D:\uipathg\ClaimBack_BGPortal\Data\OutPut\Success</Literal>
             </InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="In_Extraction_infor_googleSheetID">
               <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Extracted_InformationGoogleSheetID" />
@@ -199,7 +200,7 @@
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">230,224.5</av:Point>
             <av:Size x:Key="ShapeSize">200,54</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">330,278.5 330,308.5 460,308.5 460,227.666666666667 580,227.666666666667 580,257.666666666667</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">230,251.5 200,251.5 200,611.5 230,611.5</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="200,54" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
@@ -221,234 +222,10 @@
           </sap:WorkflowViewStateService.ViewState>
         </ui:InvokeWorkflowFile>
         <FlowStep.Next>
-          <FlowStep x:Name="__ReferenceID3">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <av:Point x:Key="ShapeLocation">480,257.666666666667</av:Point>
-                <av:Size x:Key="ShapeSize">200,84.6666666666667</av:Size>
-                <av:PointCollection x:Key="ConnectorLocation">580,342.333333333333 580,367 460,367 460,307 330,307 330,337</av:PointCollection>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Read Assets and Get Values" sap:VirtualizedContainerService.HintSize="400,1526.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_16">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BG_SupplierCode" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="338,142" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
-                <ui:GetRobotAsset.Value>
-                  <OutArgument x:TypeArguments="x:String">[BG_SupplierCode]</OutArgument>
-                </ui:GetRobotAsset.Value>
-              </ui:GetRobotAsset>
-              <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CCF_App_URL" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="338,142" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
-                <ui:GetRobotAsset.Value>
-                  <OutArgument x:TypeArguments="x:String">[CCF_APP_URL]</OutArgument>
-                </ui:GetRobotAsset.Value>
-              </ui:GetRobotAsset>
-              <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Pricing_EmailAddress" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="338,142" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
-                <ui:GetRobotAsset.Value>
-                  <OutArgument x:TypeArguments="x:String">[PricingMailBox]</OutArgument>
-                </ui:GetRobotAsset.Value>
-              </ui:GetRobotAsset>
-              <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BG_Portal_Username" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="338,142" sap2010:WorkflowViewState.IdRef="GetRobotAsset_4">
-                <ui:GetRobotAsset.Value>
-                  <OutArgument x:TypeArguments="x:String">[BgUsername]</OutArgument>
-                </ui:GetRobotAsset.Value>
-              </ui:GetRobotAsset>
-              <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Bg_potal_password" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="338,142" sap2010:WorkflowViewState.IdRef="GetRobotAsset_5">
-                <ui:GetRobotAsset.Value>
-                  <OutArgument x:TypeArguments="x:String">[BgPassword]</OutArgument>
-                </ui:GetRobotAsset.Value>
-              </ui:GetRobotAsset>
-              <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="ExtractedInformation_googlesheetID" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="338,142" sap2010:WorkflowViewState.IdRef="GetRobotAsset_6">
-                <ui:GetRobotAsset.Value>
-                  <OutArgument x:TypeArguments="x:String">[ExtractedgoogleSheetID]</OutArgument>
-                </ui:GetRobotAsset.Value>
-              </ui:GetRobotAsset>
-              <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BG_DailyDownload_GoogleSheetID" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="338,142" sap2010:WorkflowViewState.IdRef="GetRobotAsset_7">
-                <ui:GetRobotAsset.Value>
-                  <OutArgument x:TypeArguments="x:String">[BgDailDownloadGoogleSheetID]</OutArgument>
-                </ui:GetRobotAsset.Value>
-              </ui:GetRobotAsset>
-              <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Extracted_Information" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="338,142" sap2010:WorkflowViewState.IdRef="GetRobotAsset_8">
-                <ui:GetRobotAsset.Value>
-                  <OutArgument x:TypeArguments="x:String">[Extracted_InformationGoogleSheetID]</OutArgument>
-                </ui:GetRobotAsset.Value>
-              </ui:GetRobotAsset>
-            </Sequence>
-            <FlowStep.Next>
-              <FlowStep x:Name="__ReferenceID2">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <av:Point x:Key="ShapeLocation">230,337</av:Point>
-                    <av:Size x:Key="ShapeSize">200,180</av:Size>
-                    <av:PointCollection x:Key="ConnectorLocation">330,517 330,584.5</av:PointCollection>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <Sequence sap2010:Annotation.AnnotationText="Login to BG portal and Scrap the Agreements and Search the new agreements and download to the Local Folder&#xA;" DisplayName="Login BG and Download PDF adding details google sheet" sap:VirtualizedContainerService.HintSize="200,180" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                  <Sequence.Variables>
-                    <Variable x:TypeArguments="sd:DataTable" Name="DT_New_Ref" />
-                    <Variable x:TypeArguments="sd:DataTable" Name="DT_Ref_No" />
-                    <Variable x:TypeArguments="x:Boolean" Name="newRef_bool" />
-                  </Sequence.Variables>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484,54" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                    <ui:CommentOut.Body>
-                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,174.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_17">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="338,64" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[Config(&quot;Bg_Password&quot;).ToString]" />
-                      </Sequence>
-                    </ui:CommentOut.Body>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:CommentOut>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Clear Download path to avoid old files getting process&#xA;&#xA;" DisplayName="ClearDownloads.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="484,177.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="ClearDownloads.xaml">
-                    <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="In_Downloadpath">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;C:\Users\&quot;+Environment.UserName+&quot;\Documents\UiPath\ClaimBack_BGPortal\Data\Input&quot;" />
-                      </InArgument>
-                    </ui:InvokeWorkflowFile.Arguments>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:InvokeWorkflowFile>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,96" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Clearing the Download Folder&quot;]" />
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Login_British_Gypsum workflow" sap:VirtualizedContainerService.HintSize="484,115.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="BG_Portal_workflows\Login_British_Gypsum.xaml">
-                    <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="In_BGpassword">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="BgPassword" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="In_BG_Url">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;BG_URL&quot;).ToString" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="In_BGmail">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="BgUsername" />
-                      </InArgument>
-                    </ui:InvokeWorkflowFile.Arguments>
-                  </ui:InvokeWorkflowFile>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,96" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Login to British Gysum Portal&quot;]" />
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Extratact_Agreements workflow" sap:VirtualizedContainerService.HintSize="484,115.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="BG_Portal_workflows\Extratact_Agreements.xaml">
-                    <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="In_Extracted_googleId">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ExtractedgoogleSheetID" />
-                      </InArgument>
-                    </ui:InvokeWorkflowFile.Arguments>
-                  </ui:InvokeWorkflowFile>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,96" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Extracting Agreements from Portal&quot;]" />
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Bg Daily Download sheet ID&#xA;Extracted DataTable information Sheet ID&#xA;" DisplayName="Invoke Write_Data_DailyDownload workflow" sap:VirtualizedContainerService.HintSize="484,177.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="Workflows_Google_sheet\Write_Data_DailyDownload.xaml">
-                    <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="In_Extracted_googleID">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ExtractedgoogleSheetID" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="In_NewDownload_googleID">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="BgDailDownloadGoogleSheetID" />
-                      </InArgument>
-                    </ui:InvokeWorkflowFile.Arguments>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:InvokeWorkflowFile>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Find_New_BG_Ref workflow" sap:VirtualizedContainerService.HintSize="484,115.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="BG_Portal_workflows\Find_New_BG_Ref.xaml">
-                    <ui:InvokeWorkflowFile.Arguments>
-                      <OutArgument x:TypeArguments="sd:DataTable" x:Key="DT_New_Ref">
-                        <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="DT_New_Ref" />
-                      </OutArgument>
-                      <OutArgument x:TypeArguments="sd:DataTable" x:Key="DT_Ref_No">
-                        <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="DT_Ref_No" />
-                      </OutArgument>
-                      <OutArgument x:TypeArguments="x:Boolean" x:Key="Out_newREf_DT_bool">
-                        <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="newRef_bool" />
-                      </OutArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="In_newDownload_googleID">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="BgDailDownloadGoogleSheetID" />
-                      </InArgument>
-                    </ui:InvokeWorkflowFile.Arguments>
-                  </ui:InvokeWorkflowFile>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,96" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Searching the New Agreements&quot;]" />
-                  <If Condition="[newRef_bool]" sap:VirtualizedContainerService.HintSize="484,1024" sap2010:WorkflowViewState.IdRef="If_1">
-                    <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="441.333333333333,828" sap2010:WorkflowViewState.IdRef="Sequence_6">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add_New Ref No_Old workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,115.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="Workflows_Google_sheet\Add_New Ref No_Old.xaml">
-                          <ui:InvokeWorkflowFile.Arguments>
-                            <InArgument x:TypeArguments="sd:DataTable" x:Key="DT_New_Ref">
-                              <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="DT_New_Ref" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="sd:DataTable" x:Key="DT_Ref_No">
-                              <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="DT_Ref_No" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="In_NewDownload_googleID">
-                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="BgDailDownloadGoogleSheetID" />
-                            </InArgument>
-                          </ui:InvokeWorkflowFile.Arguments>
-                        </ui:InvokeWorkflowFile>
-                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Download_New_Ref No workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,115.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="BG_Portal_workflows\Download_New_Ref No.xaml">
-                          <ui:InvokeWorkflowFile.Arguments>
-                            <InArgument x:TypeArguments="sd:DataTable" x:Key="DT_New_Ref">
-                              <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="DT_New_Ref" />
-                            </InArgument>
-                          </ui:InvokeWorkflowFile.Arguments>
-                        </ui:InvokeWorkflowFile>
-                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add_New Ref No_Working workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,115.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="Workflows_Google_sheet\Add_New Ref No_Working.xaml">
-                          <ui:InvokeWorkflowFile.Arguments>
-                            <InArgument x:TypeArguments="sd:DataTable" x:Key="ADT_New_Ref">
-                              <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="DT_New_Ref" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="In_newDownlaod_googleID">
-                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="BgDailDownloadGoogleSheetID" />
-                            </InArgument>
-                          </ui:InvokeWorkflowFile.Arguments>
-                        </ui:InvokeWorkflowFile>
-                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke LogOut_BG_Portal workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,115.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="BG_Portal_workflows\LogOut_BG_Portal.xaml">
-                          <ui:InvokeWorkflowFile.Arguments>
-                            <scg:Dictionary x:TypeArguments="x:String, Argument" />
-                          </ui:InvokeWorkflowFile.Arguments>
-                        </ui:InvokeWorkflowFile>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="379.333333333333,96" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Logout BG Portal&quot;]" />
-                      </Sequence>
-                    </If.Then>
-                    <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="200,84.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_7">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </Sequence>
-                    </If.Else>
-                  </If>
-                </Sequence>
-                <FlowStep.Next>
-                  <x:Reference>__ReferenceID0</x:Reference>
-                </FlowStep.Next>
-              </FlowStep>
-            </FlowStep.Next>
-          </FlowStep>
+          <x:Reference>__ReferenceID0</x:Reference>
         </FlowStep.Next>
       </FlowStep>
-      <FlowStep x:Name="__ReferenceID4">
+      <FlowStep x:Name="__ReferenceID2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">230,154.5</av:Point>
@@ -470,7 +247,185 @@
           <x:Reference>__ReferenceID1</x:Reference>
         </FlowStep.Next>
       </FlowStep>
-      <x:Reference>__ReferenceID2</x:Reference>
+      <FlowStep>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">230,380</av:Point>
+            <av:Size x:Key="ShapeSize">200,180</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">330,560 330,584.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Sequence sap2010:Annotation.AnnotationText="Login to BG portal and Scrap the Agreements and Search the new agreements and download to the Local Folder&#xA;" DisplayName="Login BG and Download PDF adding details google sheet" sap:VirtualizedContainerService.HintSize="200,180" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="sd:DataTable" Name="DT_New_Ref" />
+            <Variable x:TypeArguments="sd:DataTable" Name="DT_Ref_No" />
+            <Variable x:TypeArguments="x:Boolean" Name="newRef_bool" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="928.666666666667,54" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+            <ui:CommentOut.Body>
+              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,174.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="338,64" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[Config(&quot;Bg_Password&quot;).ToString]" />
+              </Sequence>
+            </ui:CommentOut.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:CommentOut>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Clear Download path to avoid old files getting process&#xA;&#xA;" DisplayName="ClearDownloads.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="928.666666666667,177.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="ClearDownloads.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="In_Downloadpath">
+                <Literal x:TypeArguments="x:String">D:\uipath\ClaimBack_BGPortal\Data\Input</Literal>
+              </InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InvokeWorkflowFile>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="928.666666666667,96" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Clearing the Download Folder&quot;]" />
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Login_British_Gypsum workflow" sap:VirtualizedContainerService.HintSize="928.666666666667,115.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="BG_Portal_workflows\Login_British_Gypsum.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="In_BGpassword">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="BgPassword" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="In_BG_Url">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;BG_URL&quot;).ToString" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="In_BGmail">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="BgUsername" />
+              </InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="928.666666666667,96" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Login to British Gysum Portal&quot;]" />
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Extratact_Agreements workflow" sap:VirtualizedContainerService.HintSize="928.666666666667,115.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="BG_Portal_workflows\Extratact_Agreements.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="In_Extracted_googleId">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ExtractedgoogleSheetID" />
+              </InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="928.666666666667,96" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Extracting Agreements from Portal&quot;]" />
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Bg Daily Download sheet ID&#xA;Extracted DataTable information Sheet ID&#xA;" DisplayName="Invoke Write_Data_DailyDownload workflow" sap:VirtualizedContainerService.HintSize="928.666666666667,177.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="Workflows_Google_sheet\Write_Data_DailyDownload.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="In_Extracted_googleID">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ExtractedgoogleSheetID" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="In_NewDownload_googleID">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="BgDailDownloadGoogleSheetID" />
+              </InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InvokeWorkflowFile>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Find_New_BG_Ref workflow" sap:VirtualizedContainerService.HintSize="928.666666666667,115.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="BG_Portal_workflows\Find_New_BG_Ref.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <OutArgument x:TypeArguments="sd:DataTable" x:Key="DT_New_Ref">
+                <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="DT_New_Ref" />
+              </OutArgument>
+              <OutArgument x:TypeArguments="sd:DataTable" x:Key="DT_Ref_No">
+                <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="DT_Ref_No" />
+              </OutArgument>
+              <OutArgument x:TypeArguments="x:Boolean" x:Key="Out_newREf_DT_bool">
+                <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="newRef_bool" />
+              </OutArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="In_newDownload_googleID">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="BgDailDownloadGoogleSheetID" />
+              </InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="928.666666666667,96" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Searching the New Agreements&quot;]" />
+          <If Condition="[newRef_bool]" sap:VirtualizedContainerService.HintSize="928.666666666667,993.333333333333" sap2010:WorkflowViewState.IdRef="If_1">
+            <If.Then>
+              <Sequence sap:VirtualizedContainerService.HintSize="441.333333333333,828" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add_New Ref No_Old workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,115.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="Workflows_Google_sheet\Add_New Ref No_Old.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="sd:DataTable" x:Key="DT_New_Ref">
+                      <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="DT_New_Ref" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="sd:DataTable" x:Key="DT_Ref_No">
+                      <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="DT_Ref_No" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="In_NewDownload_googleID">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="BgDailDownloadGoogleSheetID" />
+                    </InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Download_New_Ref No workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,115.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="BG_Portal_workflows\Download_New_Ref No.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="sd:DataTable" x:Key="DT_New_Ref">
+                      <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="DT_New_Ref" />
+                    </InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add_New Ref No_Working workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,115.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="Workflows_Google_sheet\Add_New Ref No_Working.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="sd:DataTable" x:Key="ADT_New_Ref">
+                      <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="DT_New_Ref" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="In_newDownlaod_googleID">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="BgDailDownloadGoogleSheetID" />
+                    </InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke LogOut_BG_Portal workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,115.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="BG_Portal_workflows\LogOut_BG_Portal.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="379.333333333333,96" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Logout BG Portal&quot;]" />
+              </Sequence>
+            </If.Then>
+            <If.Else>
+              <Sequence sap:VirtualizedContainerService.HintSize="441.333333333333,226" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add_New Ref No_Old workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,115.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="Workflows_Google_sheet\Add_New Ref No_Old.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="sd:DataTable" x:Key="DT_New_Ref">
+                      <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="DT_New_Ref" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="sd:DataTable" x:Key="DT_Ref_No">
+                      <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="DT_Ref_No" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="In_NewDownload_googleID">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="BgDailDownloadGoogleSheetID" />
+                    </InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+              </Sequence>
+            </If.Else>
+          </If>
+        </Sequence>
+        <FlowStep.Next>
+          <x:Reference>__ReferenceID0</x:Reference>
+        </FlowStep.Next>
+      </FlowStep>
       <FlowStep>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -647,7 +602,66 @@
           </umab:GmailApplicationCard>
         </Sequence>
       </FlowStep>
-      <x:Reference>__ReferenceID3</x:Reference>
+      <FlowStep>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">480,257.666666666667</av:Point>
+            <av:Size x:Key="ShapeSize">200,84.6666666666667</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">580,342.333333333334 580,668.5 330,668.5 330,638.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Sequence DisplayName="Read Assets and Get Values" sap:VirtualizedContainerService.HintSize="200,84.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_16">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BG_SupplierCode" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="338,142" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+            <ui:GetRobotAsset.Value>
+              <OutArgument x:TypeArguments="x:String">[BG_SupplierCode]</OutArgument>
+            </ui:GetRobotAsset.Value>
+          </ui:GetRobotAsset>
+          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CCF_App_URL" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="338,142" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+            <ui:GetRobotAsset.Value>
+              <OutArgument x:TypeArguments="x:String">[CCF_APP_URL]</OutArgument>
+            </ui:GetRobotAsset.Value>
+          </ui:GetRobotAsset>
+          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Pricing_EmailAddress" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="338,142" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
+            <ui:GetRobotAsset.Value>
+              <OutArgument x:TypeArguments="x:String">[PricingMailBox]</OutArgument>
+            </ui:GetRobotAsset.Value>
+          </ui:GetRobotAsset>
+          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BG_Portal_Username" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="338,142" sap2010:WorkflowViewState.IdRef="GetRobotAsset_4">
+            <ui:GetRobotAsset.Value>
+              <OutArgument x:TypeArguments="x:String">[BgUsername]</OutArgument>
+            </ui:GetRobotAsset.Value>
+          </ui:GetRobotAsset>
+          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Bg_potal_password" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="338,142" sap2010:WorkflowViewState.IdRef="GetRobotAsset_5">
+            <ui:GetRobotAsset.Value>
+              <OutArgument x:TypeArguments="x:String">[BgPassword]</OutArgument>
+            </ui:GetRobotAsset.Value>
+          </ui:GetRobotAsset>
+          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="ExtractedInformation_googlesheetID" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="338,142" sap2010:WorkflowViewState.IdRef="GetRobotAsset_6">
+            <ui:GetRobotAsset.Value>
+              <OutArgument x:TypeArguments="x:String">[ExtractedgoogleSheetID]</OutArgument>
+            </ui:GetRobotAsset.Value>
+          </ui:GetRobotAsset>
+          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BG_DailyDownload_GoogleSheetID" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="338,142" sap2010:WorkflowViewState.IdRef="GetRobotAsset_7">
+            <ui:GetRobotAsset.Value>
+              <OutArgument x:TypeArguments="x:String">[BgDailDownloadGoogleSheetID]</OutArgument>
+            </ui:GetRobotAsset.Value>
+          </ui:GetRobotAsset>
+          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Extracted_Information" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="338,142" sap2010:WorkflowViewState.IdRef="GetRobotAsset_8">
+            <ui:GetRobotAsset.Value>
+              <OutArgument x:TypeArguments="x:String">[Extracted_InformationGoogleSheetID]</OutArgument>
+            </ui:GetRobotAsset.Value>
+          </ui:GetRobotAsset>
+        </Sequence>
+        <FlowStep.Next>
+          <x:Reference>__ReferenceID0</x:Reference>
+        </FlowStep.Next>
+      </FlowStep>
     </Flowchart>
   </Sequence>
 </Activity>
