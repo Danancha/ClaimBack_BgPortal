@@ -1,25 +1,20 @@
 {
-  "name": "DocumentUnderstandingMith",
-  "description": "Blank Process",
+  "name": "SDD Assistant",
+  "description": "Extracts information necessary for SDD",
   "main": "Main.xaml",
   "dependencies": {
-    "GoogleSpreadsheet.Activities": "[1.0.7495.12930]",
-    "Microsoft.Activities.Extensions": "[2.0.4.3]",
-    "UiPath.DocumentUnderstanding.ML.Activities": "[1.18.0]",
-    "UiPath.Excel.Activities": "[2.16.2]",
-    "UiPath.GSuite.Activities": "[2.0.1]",
-    "UiPath.IntelligentOCR.Activities": "[6.6.0]",
-    "UiPath.Mail.Activities": "[1.18.2]",
-    "UiPath.OmniPage.Activities": "[1.13.0]",
-    "UiPath.PDF.Activities": "[3.11.0]",
-    "UiPath.System.Activities": "[22.10.4]",
-    "UiPath.UIAutomation.Activities": "[22.10.5]"
+    "UiPath.Excel.Activities": "[2.8.6]",
+    "UiPath.Mail.Activities": "[1.8.6]",
+    "UiPath.System.Activities": "[20.4.0]",
+    "UiPath.UIAutomation.Activities": "[20.4.2]",
+    "UiPath.WebAPI.Activities": "[1.4.5]",
+    "UiPath.Word.Activities": "[1.4.3]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
-  "studioVersion": "21.10.5.0",
-  "projectVersion": "1.0.4",
+  "studioVersion": "20.4.3.0",
+  "projectVersion": "1.0.0",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -27,6 +22,7 @@
     "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
@@ -34,7 +30,7 @@
     "executionType": "Workflow",
     "readyForPiP": false,
     "startsInPiP": false,
-    "mustRestoreAllDependencies": true,
+    "mustRestoreAllDependencies": false,
     "pipType": "ChildSession"
   },
   "designOptions": {
@@ -54,7 +50,7 @@
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "f496a4f8-8793-4782-afdf-8256b7157a1e",
+      "uniqueId": "d816ddf0-91e0-4ff0-bd32-8b4c7e442436",
       "input": [],
       "output": []
     }
