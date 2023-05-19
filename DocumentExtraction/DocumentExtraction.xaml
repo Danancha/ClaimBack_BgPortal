@@ -591,7 +591,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:CommentOut>
-                            <ugas:GoogleSheetsApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" FileId="{x:Null}" Filename="{x:Null}" ParentFolderId="{x:Null}" ParentFolderPath="{x:Null}" SpreadsheetName="{x:Null}" Timeout="{x:Null}" Account="sharu.jeyara@test.travisperkins.com" Action="UseExisting" DisplayName="Use Google Spreadsheet" sap:VirtualizedContainerService.HintSize="730,3210" sap2010:WorkflowViewState.IdRef="GoogleSheetsApplicationScope_1" Mode="EnterId" SpreadsheetId="1oprziEWTskPM8L4WWPSQgI3bL-xqR3D05aBozyKVPBQ" UseConnectionService="False" UserEmail="sharu.jeyara@test.travisperkins.com">
+                            <ugas:GoogleSheetsApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" FileId="{x:Null}" Filename="{x:Null}" ParentFolderId="{x:Null}" ParentFolderPath="{x:Null}" SpreadsheetName="{x:Null}" Timeout="{x:Null}" Account="danancha.perera@test.travisperkins.com" Action="UseExisting" DisplayName="Use Google Spreadsheet" sap:VirtualizedContainerService.HintSize="730,3210" sap2010:WorkflowViewState.IdRef="GoogleSheetsApplicationScope_1" Mode="EnterId" SpreadsheetId="1oprziEWTskPM8L4WWPSQgI3bL-xqR3D05aBozyKVPBQ" UseConnectionService="False" UserEmail="danancha.perera@test.travisperkins.com">
                               <ugas:GoogleSheetsApplicationScope.Body>
                                 <ActivityAction x:TypeArguments="ugas:IGoogleSheetTarget">
                                   <ActivityAction.Argument>
@@ -743,7 +743,7 @@
                                             <av:PointCollection x:Key="ConnectorLocation">280,328.5 280,358.5 269.833333333333,358.5 269.833333333333,426.5</av:PointCollection>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438.666666666667,1227.33333333333" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="200,54" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1018,7 +1018,7 @@
                               <InArgument x:TypeArguments="x:String">[simpleFieldDt.Rows(0).Item("AgreemeentNumber").ToString]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="danancha.perera@travisperkins.co.uk" DisplayName="Use Gmail" EmailAddress="danancha.perera@travisperkins.co.uk" sap:VirtualizedContainerService.HintSize="530,727.333333333333" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_1" Timeout="90" UseConnectionService="False">
+                          <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="danancha.perera@test.travisperkins.com" DisplayName="Use Gmail" EmailAddress="danancha.perera@test.travisperkins.com" sap:VirtualizedContainerService.HintSize="530,727.333333333333" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_1" Timeout="90" UseConnectionService="False">
                             <umab:GmailApplicationCard.Body>
                               <ActivityAction x:TypeArguments="um:IMailQuickHandle">
                                 <ActivityAction.Argument>

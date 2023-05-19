@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1152,2906.66666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1150,2906.66666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Write_Data_DailyDownload_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="82">
@@ -93,7 +93,7 @@
       <AssemblyReference>NPOI</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Write_Data_DailyDownload" sap:VirtualizedContainerService.HintSize="646.666666666667,2842" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Write_Data_DailyDownload" sap:VirtualizedContainerService.HintSize="596.666666666667,2842" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="https://docs.google.com/spreadsheets/d/1qZXoZBMbO5ZdR46iZ438Z9HdNHlHGxUfGKLdxxc22PM/edit#gid=0" Name="BGdaily_URL" />
       <Variable x:TypeArguments="sd:DataTable" Name="BG_DT" />
@@ -105,24 +105,24 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="584.666666666667,1254.66666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="534.666666666667,1254.66666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="546,1015.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_21">
+        <Sequence sap:VirtualizedContainerService.HintSize="496,1015.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_21">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484,54" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,54" sap2010:WorkflowViewState.IdRef="CommentOut_7">
             <ui:CommentOut.Body>
-              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,198.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_22">
+              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,198.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_22">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:ReadRange AddHeaders="True" DataTable="[BG_DT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="sheet1" WorkbookPath="DT.xlsx">
+                <ui:ReadRange AddHeaders="True" DataTable="[BG_DT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="338,88" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="sheet1" WorkbookPath="DT.xlsx">
                   <ui:ReadRange.Range>
                     <InArgument x:TypeArguments="x:String">
                       <Literal x:TypeArguments="x:String" Value="" />
@@ -138,27 +138,27 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:CommentOut>
-          <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="484,136" sap2010:WorkflowViewState.IdRef="Sequence_24">
+          <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="434,136" sap2010:WorkflowViewState.IdRef="Sequence_24">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Delay DisplayName=" Delay 5 seconds" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="388,25.3333333333333" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <Delay DisplayName=" Delay 5 seconds" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="338,25.3333333333333" sap2010:WorkflowViewState.IdRef="Delay_1" />
           </Sequence>
-          <ugas:GoogleSheetsApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" FileId="{x:Null}" Filename="{x:Null}" ParentFolderId="{x:Null}" ParentFolderPath="{x:Null}" SpreadsheetName="{x:Null}" Timeout="{x:Null}" Account="automation1@travisperkins.com" Action="UseExisting" DisplayName="Use Google Spreadsheet" sap:VirtualizedContainerService.HintSize="484,634.666666666667" sap2010:WorkflowViewState.IdRef="GoogleSheetsApplicationScope_3" Mode="EnterId" SpreadsheetId="[In_Extracted_googleID]" UseConnectionService="False" UserEmail="automation1@travisperkins.com">
+          <ugas:GoogleSheetsApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" FileId="{x:Null}" Filename="{x:Null}" ParentFolderId="{x:Null}" ParentFolderPath="{x:Null}" SpreadsheetName="{x:Null}" Timeout="{x:Null}" Account="danancha.perera@test.travisperkins.com" Action="UseExisting" DisplayName="Use Google Spreadsheet" sap:VirtualizedContainerService.HintSize="434,634.666666666667" sap2010:WorkflowViewState.IdRef="GoogleSheetsApplicationScope_3" Mode="EnterId" SpreadsheetId="[In_Extracted_googleID]" UseConnectionService="False" UserEmail="danancha.perera@test.travisperkins.com">
             <ugas:GoogleSheetsApplicationScope.Body>
               <ActivityAction x:TypeArguments="ugas:IGoogleSheetTarget">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="ugas:IGoogleSheetTarget" Name="ExtractedDetails" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,338.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,338.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_20">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uga:ReadRange ContinueOnError="{x:Null}" Range="{x:Null}" SpreadsheetId="{x:Null}" AuthScopesInvalid="False" DisplayName="Read Range" GoogleSpreadsheet="[ExtractedDetails]" sap:VirtualizedContainerService.HintSize="388,228" sap2010:WorkflowViewState.IdRef="ReadRange_5" IncludeHeaders="True" Result="[BG_DT]" SheetName="Sheet1" />
+                  <uga:ReadRange ContinueOnError="{x:Null}" Range="{x:Null}" SpreadsheetId="{x:Null}" AuthScopesInvalid="False" DisplayName="Read Range" GoogleSpreadsheet="[ExtractedDetails]" sap:VirtualizedContainerService.HintSize="338,228" sap2010:WorkflowViewState.IdRef="ReadRange_5" IncludeHeaders="True" Result="[BG_DT]" SheetName="Sheet1" />
                 </Sequence>
               </ActivityAction>
             </ugas:GoogleSheetsApplicationScope.Body>
@@ -176,7 +176,7 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="550.666666666667,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="500.666666666667,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -255,7 +255,7 @@
         </ui:CommentOut>
       </TryCatch.Finally>
     </TryCatch>
-    <ui:FilterDataTable DataTable="[BG_DT]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="584.666666666667,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[BG_Reference_number]" SelectColumnsMode="Remove">
+    <ui:FilterDataTable DataTable="[BG_DT]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="534.666666666667,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[BG_Reference_number]" SelectColumnsMode="Remove">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="EQ" />
@@ -274,17 +274,17 @@
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
-    <ui:OutputDataTable DataTable="[BG_Reference_number]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="584.666666666667,82" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[BG_Ref_Str]" />
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="584.666666666667,64" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[BG_Ref_Str]" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="584.666666666667,54" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+    <ui:OutputDataTable DataTable="[BG_Reference_number]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="534.666666666667,82" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[BG_Ref_Str]" />
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="534.666666666667,64" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[BG_Ref_Str]" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="534.666666666667,54" sap2010:WorkflowViewState.IdRef="CommentOut_4">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,198.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_9">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,198.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_9">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ReadColumn DisplayName="Read Column" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="ReadColumn_1" Result="[BG_Reference_number]" SheetName="sheet1" StartingCell="A2" WorkbookPath="DT.xlsx" />
+          <ui:ReadColumn DisplayName="Read Column" sap:VirtualizedContainerService.HintSize="338,88" sap2010:WorkflowViewState.IdRef="ReadColumn_1" Result="[BG_Reference_number]" SheetName="sheet1" StartingCell="A2" WorkbookPath="DT.xlsx" />
         </Sequence>
       </ui:CommentOut.Body>
       <sap:WorkflowViewStateService.ViewState>
@@ -294,27 +294,27 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="584.666666666667,54" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="534.666666666667,54" sap2010:WorkflowViewState.IdRef="CommentOut_6">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="548.666666666667,411.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_11">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="498.666666666667,411.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_11">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ForEach x:TypeArguments="sd:DataTable" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="486.666666666667,300.666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[BG_Reference_number]">
+          <ui:ForEach x:TypeArguments="sd:DataTable" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="436.666666666667,300.666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[BG_Reference_number]">
             <ui:ForEach.Body>
               <ActivityAction x:TypeArguments="sd:DataTable">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataTable" Name="item" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,174.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,174.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,64" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[item.ToString]" />
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="338,64" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[item.ToString]" />
                 </Sequence>
               </ActivityAction>
             </ui:ForEach.Body>
@@ -334,20 +334,20 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ugas:GoogleSheetsApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" FileId="{x:Null}" Filename="{x:Null}" ParentFolderPath="{x:Null}" SpreadsheetName="{x:Null}" Timeout="{x:Null}" Account="automation1@travisperkins.com" Action="UseExisting" DisplayName="Use Google Spreadsheet" sap:VirtualizedContainerService.HintSize="584.666666666667,818.666666666667" sap2010:WorkflowViewState.IdRef="GoogleSheetsApplicationScope_2" Mode="EnterId" ParentFolderId="1qZXoZBMbO5ZdR46iZ438Z9HdNHlHGxUfGKLdxxc22PM" SpreadsheetId="[In_NewDownload_googleID]" UseConnectionService="False" UserEmail="automation1@travisperkins.com">
+    <ugas:GoogleSheetsApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" FileId="{x:Null}" Filename="{x:Null}" ParentFolderPath="{x:Null}" SpreadsheetName="{x:Null}" Timeout="{x:Null}" Account="danancha.perera@test.travisperkins.com" Action="UseExisting" DisplayName="Use Google Spreadsheet" sap:VirtualizedContainerService.HintSize="534.666666666667,818.666666666667" sap2010:WorkflowViewState.IdRef="GoogleSheetsApplicationScope_2" Mode="EnterId" ParentFolderId="1qZXoZBMbO5ZdR46iZ438Z9HdNHlHGxUfGKLdxxc22PM" SpreadsheetId="[In_NewDownload_googleID]" UseConnectionService="False" UserEmail="danancha.perera@test.travisperkins.com">
       <ugas:GoogleSheetsApplicationScope.Body>
         <ActivityAction x:TypeArguments="ugas:IGoogleSheetTarget">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ugas:IGoogleSheetTarget" Name="New_Download" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,522.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_17">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,522.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_17">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uga:ClearRange ContinueOnError="{x:Null}" SpreadsheetId="{x:Null}" AuthScopesInvalid="False" DisplayName="Clear Range" GoogleSpreadsheet="[New_Download]" sap:VirtualizedContainerService.HintSize="388,143.333333333333" sap2010:WorkflowViewState.IdRef="ClearRange_1" Range="A2:A" SheetName="New Download" />
-            <uga:WriteRange ContinueOnError="{x:Null}" Request="{x:Null}" Result="{x:Null}" SpreadsheetId="{x:Null}" AuthScopesInvalid="False" DataTable="[BG_Reference_number]" DisplayName="Write Range" GoogleSpreadsheet="[New_Download]" sap:VirtualizedContainerService.HintSize="388,228.666666666667" sap2010:WorkflowViewState.IdRef="WriteRange_2" IncludeHeaders="False" IsInsideBatchUpdateScope="False" SheetName="New Download" StartingCell="A2" />
+            <uga:ClearRange ContinueOnError="{x:Null}" SpreadsheetId="{x:Null}" AuthScopesInvalid="False" DisplayName="Clear Range" GoogleSpreadsheet="[New_Download]" sap:VirtualizedContainerService.HintSize="338,143.333333333333" sap2010:WorkflowViewState.IdRef="ClearRange_1" Range="A2:A" SheetName="New Download" />
+            <uga:WriteRange ContinueOnError="{x:Null}" Request="{x:Null}" Result="{x:Null}" SpreadsheetId="{x:Null}" AuthScopesInvalid="False" DataTable="[BG_Reference_number]" DisplayName="Write Range" GoogleSpreadsheet="[New_Download]" sap:VirtualizedContainerService.HintSize="338,228.666666666667" sap2010:WorkflowViewState.IdRef="WriteRange_2" IncludeHeaders="False" IsInsideBatchUpdateScope="False" SheetName="New Download" StartingCell="A2" />
           </Sequence>
         </ActivityAction>
       </ugas:GoogleSheetsApplicationScope.Body>
